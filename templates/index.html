@@ -1,41 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="{{ url_for('static',filename='libs/bootstrap-5.3.2/css/bootstrap.min.css')}}">
-  <link rel="stylesheet" href="{{url_for('static',filename='css/admin.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="../static/css/finalPortfolio.css">
+    <link rel="stylesheet" href="../static/css/color-1.css">
+    <title>Sujan Pokharel</title>
+
+
 </head>
-
 <body>
-  <header>
-    <nav class="container-flud">
-      <div class="row">
-        <div class="col-sm-3">
-          <h3>{{name}}</h3>
-        </div>
-        <div class="col-md-9">
-          <ul class="nav">
-            {% for page in pages %}
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{url_for('page',url=page.url)}}">{{page.name}}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <div>
-    <p>{{page.description|safe}}</p>
-    {% for image in page_images %}
-      <img src="{{url_for('static',filename=image.image)}}">
-    {% endfor %}
-  </div>
-  <footer></footer>
-  <script src="{{ url_for('static',filename='libs/bootstrap-5.3.2/js/bootstrap.min.js')}}"></script>
-</body>
 
+    <!-- Main Container start-->
+    <div class="main-container">
+        <!-- aside start -->
+        <div class="aside">
+            <div class="logo">
+                <a href="#"><span>Sujan</span></a>
+            </div>
+            <div class="nav-toggler">
+                <span></span>
+            </div>
+            <ul class="nav">
+                <li><a href="#home" class="active"> <i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#about" class="active" > <i class="fa fa-user"></i> About</a></li>
+                
+                <li><a href="#portfolio" class="active"> <i class="fa fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#contact" class="active"> <i class="fa fa-comments"></i> Contact</a></li>
+                <li> <button class="btn btn1">Dark</button></li>
+                
+            </ul>
+        </div>
+         <!-- aside end -->
+
+          <!-- aside start -->
+        <div class="aside1">
+            <div class="logo">
+                <a href="#"><span>Sujan</span></a>
+            </div>
+            <div class="nav-toggler">
+                <span></span>
+            </div>
+            <ul class="nav">
+                <li><a href="#home" class="active"> <i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#about" class="active" > <i class="fa fa-user"></i> About</a></li>
+                
+                <li><a href="#portfolio" class="active"> <i class="fa fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#contact" class="active"> <i class="fa fa-comments"></i> Contact</a></li>
+                <li> <button  class="btn btn1">Dark</button></li>
+                <li> <button id="close" class="btn menu">Close</button></li>
+                
+            </ul>
+        </div>
+         <!-- aside end -->
+         <!-- Main COntent start -->
+         <div class="main-content">
+
+            <!-- home start -->
+            <section class="home section"  id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hello, my name is <span class="name"> Sujan Pokharel</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">Game Developer</span>
+                            </h3>
+                            <p class="homePara"> Sujan Pokharel, embark on my journey in Game development, I meticulously craft my digital portfolio, infusing it with the artistry of coding. Each line of code represents my evolving skills and fervent dedication to the dynamic realm of web development.
+                            </p>
+                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                            <a href="#" class="btn menu homeMenu">Menu</a>
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="../static/images/IMG_20220924_110359.jpg" alt="Mero pic ho">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- home ends -->
+            <!-- About start -->
+            <section class="about section " id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15" >
+                        <h2 class="aboutH2">About Me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                            <div class="about-text padd-15">
+                                <h3 class="aboutH3">I'm Sujan Pokharel</h3>
+                                <p class="aboutP">
+                                    I am a passionate learner, deeply committed to expanding my skills in game development and front-end web development. I immerse myself in these fields, constantly seeking new knowledge and challenges. While I have an intern-level understanding of HTML, CSS, and JavaScript for web development, and C++ along with Unreal Engine for game development, I am eager to learn and grow in these areas. My enthusiasm drives me to explore innovative approaches, always striving to enhance user experiences and functionality. My commitment to learning and creativity fuels my journey as both a game developer and a front-end developer, shaping me into a versatile and promising professional in the tech industry.
+                                </p>
+                            </div>
+                            </div>
+                            <div class="row" id="about_detail_row">
+                                <div class="personal-info padd-15">
+                                    <div class="row">
+                                        <div class="info-item padd-15">
+                                            <p class="detail-Title">Birthday: <span class="detail">14th sep, 2004 </span> </p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p class="detail-Title">Age: <span class="detail">19 </span> </p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p class="detail-Title">Email: <span class="detail">sujanpokharel04@gmail.com </span> </p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p class="detail-Title">Degree: <span class="detail">BIT(Bachloer in Infirmation Technology)</span> </p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p class="detail-Title">Phone: <span class="detail">+977-9762874109 </span> </p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p class="detail-Title">City: <span class="detail">Kathmandu </span> </p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p class="detail-Title">Freelance: <span class="detail">Available </span> </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="buttons padd-15">
+                                            <a href="https://drive.google.com/drive/folders/1v3Ms7LLWGL3ApIV2ZukoO6v3ciO13T0V?usp=sharing" target="_blank" class="btn">Download CV</a>
+                                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills padd-15">
+                                    <div class="row">
+                                        <div class="skill-item padd-15">
+
+                                        <h5 class="skill">Frontend (HTML, CSS, JS)</h5>
+                                        <div class="progress">
+                                            <div class="progress-in" style="width: 70%;"> </div>
+                                            <div class="skill-percent">70%</div>
+                                        </div>
+                                    </div>
+
+                                    
+                                 
+
+
+                                    <div class="skill-item padd-15">
+
+                                        <h5 class="skill">C</h5>
+                                        <div class="progress">
+                                            <div class="progress-in" style="width: 70%;"> </div>
+                                            <div class="skill-percent">70%</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item padd-15">
+
+                                        <h5 class="skill">JAVA</h5>
+                                        <div class="progress">
+                                            <div class="progress-in" style="width: 65%;"> </div>
+                                            <div class="skill-percent">65%</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item padd-15">
+
+                                        <h5 class="skill">WORD PRESS</h5>
+                                        <div class="progress">
+                                            <div class="progress-in" style="width: 50%;"> </div>
+                                            <div class="skill-percent">50%</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item padd-15">
+
+                                        <h5 class="skill">C++</h5>
+                                        <div class="progress">
+                                            <div class="progress-in" style="width: 40%;"> </div>
+                                            <div class="skill-percent">40%</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item padd-15">
+
+                                        <h5 class="skill">Unreal Engine</h5>
+                                        <div class="progress">
+                                            <div class="progress-in" style="width: 40%;"> </div>
+                                            <div class="skill-percent">40%</div>
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="education padd-15">
+                                    <h3 class="title">Education</h3>
+                                        <div class="row">
+                                            <div class="timeline-box padd-15 ">
+                                                <div class="timeline shadow-dark edu">
+                                                    <!-- timeline item -->
+                                                    <div class="timeline-item">
+                                                        <div class="circle-dot"></div>
+                                                        <h3 class="timeline-date">
+                                                            <i class="fa fa-calendar"></i> 2021
+                                                        </h3>
+                                                        <h4 class="timeline-title">10/ SEE</h4>
+                                                        <p class="timeline-text">Completed from Reliance Co-Ed School with gpa 3.60</p>
+                                                    </div>
+
+                                                    <div class="timeline-item">
+                                                        <div class="circle-dot"></div>
+                                                        <h3 class="timeline-date">
+                                                            <i class="fa fa-calendar"></i> 2021- 2023
+                                                        </h3>
+                                                        <h4 class="timeline-title">+2 Business And Management</h4>
+                                                        <p class="timeline-text">Completed from Bagmati School/College with gpa 3.40</p>
+                                                    </div>
+
+                                                    <div class="timeline-item">
+                                                        <div class="circle-dot"></div>
+                                                        <h3 class="timeline-date">
+                                                            <i class="fa fa-calendar"></i> 2023 - 2027
+                                                        </h3>
+                                                        <h4 class="timeline-title">Bachloer in Information Technology</h4>
+                                                        <p class="timeline-text">Currently Studying <br>
+                                                            second year 3rd semester running <br> first year completed with gpa 3.47 
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            
+
+                                <div class="experience padd-15">
+                                    <h3 class="title">Experience</h3>
+                                     <!-- ####### only change this name and date to change experience######### -->
+                                        <div class="row ">
+                                            <div class="timeline-box padd-15">
+                                                <div class="timeline shadow-dark exp">
+                                                   <p>none</p>
+                                                    <!-- <div class="timeline-item">
+                                                        <div class="circle-dot"></div>
+                                                        <h3 class="timeline-date">
+                                                            <i class="fa fa-calendar"></i> 2021
+                                                        </h3>
+                                                        <h4 class="timeline-title">10/ SEE</h4>
+                                                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aperiam necessitatibus mollitia, iure totam ex magni accusamus recusandae nostrum nihil aliquid voluptate dolorum consequatur deleniti perspiciatis in, magnam sed explicabo?</p>
+                                                    </div>
+
+                                                    <div class="timeline-item">
+                                                        <div class="circle-dot"></div>
+                                                        <h3 class="timeline-date">
+                                                            <i class="fa fa-calendar"></i> 2021- 2023
+                                                        </h3>
+                                                        <h4 class="timeline-title">+2 Business And Management</h4>
+                                                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aperiam necessitatibus mollitia, iure totam ex magni accusamus recusandae nostrum nihil aliquid voluptate dolorum consequatur deleniti perspiciatis in, magnam sed explicabo?</p>
+                                                    </div>
+
+                                                    <div class="timeline-item">
+                                                        <div class="circle-dot"></div>
+                                                        <h3 class="timeline-date">
+                                                            <i class="fa fa-calendar"></i> 2023 - 2027
+                                                        </h3>
+                                                        <h4 class="timeline-title">Bachloer in Information Technology</h4>
+                                                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aperiam necessitatibus mollitia, iure totam ex magni accusamus recusandae nostrum nihil aliquid voluptate dolorum consequatur deleniti perspiciatis in, magnam sed explicabo?</p>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <!-- About ends -->
+
+
+            <!-- Portfolio starts -->
+
+                <section class="portfolio" id="portfolio">
+                    <div class="container">
+                        <div class="row">
+                            <div class="section-title padd-15">
+                                <h2 class="portfolioH2">Portfolio</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio-heading padd-15">
+                                My last project
+                            </div>
+                        </div>
+                        <div class="row">
+                           
+
+                             <!-- portfolio item starts -->
+
+                             <div class="portfolio-item padd-15">
+                                <div class="portfolio-item-inner shadow-dark">
+                                    <div class="portfolio-img">
+                                        <a href="https://sujanpokharel-calculator.netlify.app/" target="_blank"><img src="../static/images/calculator.png" alt="project img" ></a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            
+                            <!-- portfolio item ends -->
+
+                             <!-- portfolio item starts -->
+
+                             <div class="portfolio-item padd-15">
+                                <div class="portfolio-item-inner shadow-dark">
+                                    <div class="portfolio-img">
+                                        <a href="https://sujanpokharel-tictactoe.netlify.app/" target="_blank"><img src="../static/images/tictactoe.png" alt="project img"></a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            
+                            <!-- portfolio item ends -->
+                        </div>
+                    </div>
+                </section>
+            <!-- Portfolio ends-->
+
+
+                <!-- COntaact start-->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2 class="contactH2">Contact Me</h2>
+                        </div>
+                    </div>
+
+                    <h3 class="contact-title padd-15">Have Any Questions ?</h3>
+                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+                    <div class="row">
+                        <!-- contact info item -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <h4 class="contacth4">call me on</h4>
+                            <p class="contactP">+977 9762874109</p>
+                        </div>
+                        <!-- contact info item  end-->
+
+                        <!-- contact info item -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <h4 class="contacth4">Email</h4>
+                            <p  class="contactP">sujanpokharel04@gmail.com</p>
+                        </div>
+                        <!-- contact info item  end-->
+
+                        <!-- contact info item -->
+                        
+                        <div class="contact-info-item padd-15 location_hide">
+                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <h4 class="contacth4">Nepal</h4>
+                            <p  class="contactP">Kapan, Kathmandu</p>
+                        </div>
+                   
+                        <!-- contact info item  end-->
+
+                         <!-- contact info item -->
+                         <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-linkedin" ></i></div>
+                            <h4 class="contacth4">Linked In</h4>
+                            <p  class="contactP">Sujan Pokharel</p>
+                        </div>
+                        <!-- contact info item  end-->
+
+                        
+
+                    </div>
+
+                    <h3 class="contact-title padd-15">Send Me An Email</h3>
+                    <h4 class="contact-sub-title padd-15">I'll Surely Respond</h4>
+                    <!-- contact form -->
+                    <div class="row">
+                        <div class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="Email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name=""  class="form-control" placeholder="Message...."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                   <button type="submit" class="btn"> Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- contact form  ends-->
+                </div>
+            </section>
+
+          
+            <!-- Contact ends-->
+             <!-- footer start -->
+
+             <section class="foot"> 
+            <footer>
+                <div class="footer-content">
+                    <h3>Sujan Pokharel</h3>
+                    <p>Game Developer and FrontEnd Developer</p>
+                    <ul class="socials">
+                        <li><a href="https://www.facebook.com/suzzan.pokharel.16" target = "_blank"
+                             ><i class='bx bxl-facebook-circle'></i></a></li>
+                        <li><a href="https://www.instagram.com/pokharelsuzzan/" target = "_blank"
+                            ><i class='bx bxl-instagram-alt'></i></a></li>
+                        <li><a href="https://github.com/suzzan04" target = "_blank"
+                            ><i class='bx bxl-github' ></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCUyiuSGuqAYHpsKVGFMo6zw" target = "_blank"
+                            ><i class='bx bxl-youtube' ></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/sujan-pokharel-7384a2261/" target ="_ blank"
+                            ><i class='bx bxl-linkedin-square' ></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div>
+                    <p>copyright &copy; <a href="#">Sujan Pokharel</a>  </p> 
+                    </div>
+                            <div class="footer-menu">
+                              <ul class="f-menu">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li> 
+
+                              </ul>
+                            </div>
+                </div>
+        
+            </footer>
+        </section>
+         <!-- footer end -->
+           
+
+         </div>
+         <!-- Main COntent end -->
+    </div>
+     <!-- Main Container end-->
+
+       
+
+     <!-- js script -->
+     <script src="../static/js/index.js"></script>
+</body>
 </html>
